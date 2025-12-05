@@ -1,11 +1,11 @@
 # app/dependencies.py
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
-from app.core.security import verify_token
 from app.db.session import get_db
 from sqlalchemy.orm import Session
 
 from app.models.user import User
+from app.utils.jwt_handeler import verify_token
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/auth/login")
 

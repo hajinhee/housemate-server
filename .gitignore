@@ -44,17 +44,17 @@ alembic/versions/__pycache__/
 *.env.*
 !.env.example
 
-# Docker volumes mount 시 생길 수 있는 캐시
-**/.dockerignore
+# pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
 
-
+# 빌드 결과물 (배포용)
+dist/
+build/
 
 # 기타
 .DS_Store
 Thumbs.db
 *.bak
 *.old
-
-# 빌드 결과물 (배포용)
-dist/
-build/
